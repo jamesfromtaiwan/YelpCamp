@@ -14,14 +14,13 @@ var express     	= require("express"),
     commentRoute 	= require('./routes/comments'),
     indexRoute 		= require('./routes/index')	
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect(process.env.DATABASEURL);
 // create yelp_camp database inside mongodb
 
 
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine', 'ejs');
-
 // For stylesheets & scripts files loading
 app.use(express.static(__dirname + '/public'));
 
