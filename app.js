@@ -16,6 +16,7 @@ var express     	= require("express"),
 
 mongoose.connect(process.env.DATABASEURL);
 // create yelp_camp database inside mongodb
+// mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
