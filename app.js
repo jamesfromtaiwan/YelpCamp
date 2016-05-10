@@ -14,7 +14,8 @@ var express     	= require("express"),
     commentRoute 	= require('./routes/comments'),
     indexRoute 		= require('./routes/index')	
 
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(url);
 // create yelp_camp database inside mongodb
 // mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
 
