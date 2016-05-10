@@ -14,13 +14,15 @@ var express     	= require("express"),
     commentRoute 	= require('./routes/comments'),
     indexRoute 		= require('./routes/index')	
 
-// var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
-// mongoose.connect(url);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(url);
 // create yelp_camp database inside mongodb
-mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
+// mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
+
+app.set('port', (process.env.PORT || 5000));
 
 app.set('view engine', 'ejs');
 // For stylesheets & scripts files loading
@@ -70,6 +72,6 @@ function isLoggedIn(req,res,next) {
 	res.redirect('/login');
 };
 
-app.listen(3000, function() {
+app.listen(app.get('port'), function() {
 	console.log('The server has been connected.');
 });
