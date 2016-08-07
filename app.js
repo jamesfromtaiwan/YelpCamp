@@ -12,14 +12,14 @@ var express     	= require("express"),
     Comment 		= require('./models/comment'),
     campRoute		= require('./routes/campgrounds'),
     commentRoute 	= require('./routes/comments'),
-    indexRoute 		= require('./routes/index')	
+    indexRoute 		= require('./routes/index'),
+    morgan          = require('morgan');
 
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(url);
 // create yelp_camp database inside mongodb
 // mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
-
-
+app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('port', (process.env.PORT || 5000));
@@ -37,7 +37,7 @@ app.use(flash());
 
 // PASSPORT CONFIG
 app.use(require('express-session')({
-	secret: 'James',
+	secret: 'JamesFromTaiwan',
 	resave: false,
 	saveUninitialzed: false
 }));
