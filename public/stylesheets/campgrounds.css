@@ -1,0 +1,12 @@
+.campgrounds .jumbotron {
+	width:100%;
+	background: url('../images/campgrounds.jpg') no-repeat center center ;
+	height: 100%;
+	min-height: 100%;
+}
+
+.campgrounds .container {
+	padding-left: 200px;
+}
+
+

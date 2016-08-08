@@ -12,3 +12,12 @@
 .navbar-default .navbar-brand {color:white;}
 
 /* Nav End Here */
+
+/* Alert Start From Here */
+.alert {
+	text-align: center;
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+}
+/*Alert End Here */
