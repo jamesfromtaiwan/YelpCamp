@@ -1,0 +1,14 @@
+/* Nav Start Here*/
+.navbar {margin: 0;}
+
+.navbar-header a {font-weight: 700;}
+
+.navbar-default {border-color: none;}
+
+.navbar.navbar-default {background: #2ecc71;}
+
+.navbar-default .navbar-nav>li>a {color: white; font-weight: 700;}
+
+.navbar-default .navbar-brand {color:white;}
+
+/* Nav End Here */

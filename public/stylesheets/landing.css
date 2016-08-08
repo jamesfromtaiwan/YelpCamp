@@ -1,0 +1,27 @@
+/* Landing Page Start Here */
+.site-wrapper {
+	width: 100%;
+	background: url('../images/forest.jpg') no-repeat center center fixed;
+	height: 100%;
+	min-height: 100%;
+	position: absolute;
+
+
+}
+
+.landing-container {
+	text-align: center;
+	padding-top: 200px;
+	color: white;
+}
+
+.landing-container span.nextLine {
+	line-height: 65px;
+	display: block;
+}
+
+.landing-container h2 { font-size: 2.5em; }
+
+.landing-container a { margin: 40px 0 20px 0;}
+
+/* Landing Page End Here */
