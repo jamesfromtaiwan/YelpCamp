@@ -20,6 +20,7 @@ This is the barely minimum viable version of my app. There are fews things to be
 3. More form validation to avoid injection and add security layer
 4. Add node cluster and proper logging npm for production version app
 5. Add profile section.
+6. Add gulp to minify the static files
 
 ## Copyright
 The app is created by @Lo Jin Shuen (jamesfromtaiwan), 2016.
