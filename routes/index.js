@@ -16,7 +16,7 @@ router.post('/register', function (req, res) {
 	User.register(newUser, req.body.password, function (err,user) {
 		if (err) {
 			req.flash('error', err.message);
-			return res.render('register');
+			return res.redirect('register');
 		};
 
 		passport.authenticate('local')(req,res, function() {
@@ -34,9 +34,9 @@ router.get('/login', function (req, res) {
 
 // Passport takes the req.body.username and req.body.password and passes it to our verification function in the local strategy.
 
-router.post('/login', passport.authenticate('local', {
-	failureRedirect: '/login',
-}) ,function (req, res) {
+router.post('/login',
+	passport.authenticate('local', { failureRedirect: '/login', failureFlash: 'Invalid username or password' }),
+	function (req, res) {
 	// req.user contains the authenticated user
 	req.flash('success', 'Successfully Logged In');
 	res.redirect('/campgrounds');

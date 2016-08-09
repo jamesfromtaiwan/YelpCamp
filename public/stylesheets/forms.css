@@ -1,0 +1,23 @@
+.form-main {
+	width: 30%;
+	margin: 25px auto;
+}
+
+.form-heading {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.btn-back {
+	padding-top: 10px;
+	display: block;
+	float: right;
+	clear:both;
+}
+
+.form {padding-top: 125px;}
+
+.btn-submit button {
+	width: 50%;
+}
+
