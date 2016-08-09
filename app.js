@@ -13,12 +13,13 @@ var express     	= require("express"),
     campRoute		= require('./routes/campgrounds'),
     commentRoute 	= require('./routes/comments'),
     indexRoute 		= require('./routes/index'),
-    morgan          = require('morgan');
+    morgan          = require('morgan'),
+    compression     = require('compression');
 
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+
+var url = process.env.DATABASEURL;
 mongoose.connect(url);
-// create yelp_camp database inside mongodb
-// mongoose.connect("mongodb://james:james1994@ds017862.mlab.com:17862/yelpcamp");
+app.use(compression());
 app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -39,7 +40,7 @@ app.use(flash());
 app.use(require('express-session')({
 	secret: 'JamesFromTaiwan',
 	resave: false,
-	saveUninitialzed: false
+    saveUninitialized:false
 }));
 
 app.use(passport.initialize());
@@ -73,5 +74,5 @@ function isLoggedIn(req,res,next) {
 };
 
 app.listen(app.get('port'), function() {
-	console.log('The server has been connected.');
+	console.log('Express server is running at port ' + app.get('port') + ' in ' + process.env.NODE_ENV + ' mode.');
 });
