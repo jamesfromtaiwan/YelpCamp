@@ -17,7 +17,7 @@ var express     	= require("express"),
     compression     = require('compression');
 
 
-var url = process.env.DATABASEURL;
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
 mongoose.connect(url);
 app.use(compression());
 app.use(morgan('combined'));
