@@ -1,4 +1,4 @@
-/* Main Global*/
+/* Main Global Start Here*/
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -15,24 +15,6 @@ p, a {
 	font-weight: 400;
 	text-decoration: none;
 }
-/* Main Global*/
+/* Main Global End Here*/
 
-.thumbnail img {
-    width: 100%;
-}
 
-.thumbnail {
-    padding: 0;
-}
-
-.thumbnail .caption-full {
-    padding: 9px;
-}
-
-#form-delete {
-	display: inline;
-}
-
-#form-comment-delete {
-	display: inline;
-}

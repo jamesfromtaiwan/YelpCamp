@@ -5,10 +5,35 @@
 	min-height: 100%;
 }
 
-.campgrounds .container {
-	padding-left: 200px;
-}
 
 .campgrounds-show.container {
 	padding-top: 40px;
+}
+
+.thumbnail img {
+    width: 100%;
+    
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+@media (min-width: 992px) {
+	.campgrounds-index .thumbnail img {height: 150px;}
+	.campgrounds-index .thumbnail {min-height: 272px;}
+
+}
+
+@media (max-width: 992px) {
+	.campgrounds-index .thumbnail img {height: 220px;}
+	.campgrounds-index .thumbnail {min-height: 323px;}
+}
+
+@media (max-width: 768px) {
+	.campgrounds-index .thumbnail img {height: auto;}
 }

@@ -1,6 +1,7 @@
 .form-main {
 	width: 30%;
 	margin: 25px auto;
+	min-width: 250px;
 }
 
 .form-heading {
@@ -19,5 +20,14 @@
 
 .btn-submit button {
 	width: 50%;
+}
+
+
+#form-delete {
+	display: inline;
+}
+
+#form-comment-delete {
+	display: inline;
 }
 
