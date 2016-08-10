@@ -22,3 +22,12 @@
 	width: 50%;
 }
 
+
+#form-delete {
+	display: inline;
+}
+
+#form-comment-delete {
+	display: inline;
+}
+

@@ -2,7 +2,7 @@
 
 <div class="campgrounds">
 	<header class="jumbotron">
-		<div class="container">
+		<div class=" text-center container">
 			<h1>Welcome to YelpCamp</h1>
 			<p>View our campgrounds from all over the world.</p>
 			<p>
@@ -12,12 +12,12 @@
 	</header>
 </div>
 
-<div class="container">
+<div class="campgrounds-index container">
 	<div class="row text-center" style="display:flex; flex-wrap: wrap">	
 		<% campgrounds.forEach(function(campground) { %>
-			<div class="col-md-3 col-sm-6">
+			<div class="col-md-3 col-sm-6 col-xm-12" >
 				<div class="thumbnail">
-					<img src="<%= campground.image %>" alt="<%= campground.name %>">
+					<img class="img-responsive" src="<%= campground.image %>" alt="<%= campground.name %>">
 					<div class="caption">
 						<h4><%= campground.name %></h4>
 					</div>
