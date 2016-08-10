@@ -11,6 +11,20 @@
 
 .navbar-default .navbar-brand {color:white;}
 
+	/*Hover effect for hamburger Start Here */
+	.navbar-toggle.collapsed {border-color: white; background: none !important;}
+	.navbar-toggle.collapsed .icon-bar {background: white !important;}
+	.navbar-toggle.collapsed:hover {background: white !important; }
+	.navbar-toggle.collapsed:hover .icon-bar {background: #2ecc71 !important;}
+	/*Hover effect for hamburger End Here */
+	
+	/*Focus effect for hamburger Start Here*/
+	.navbar-default .navbar-toggle:focus {background: white; border-color: white;}
+	.navbar-default .navbar-toggle:focus .icon-bar {background: #2ecc71;}
+	/*Focus effect for hamburger End Here*/
+
+
+
 /* Nav End Here */
 
 /* Alert Start From Here */
@@ -20,4 +34,4 @@
 	border-radius: 0;
 	margin: 0;
 }
-/*Alert End Here */
+/*Alert End Here 
